@@ -1,0 +1,48 @@
+<h2>Consultas</h2>
+
+<a href="/consultas/cadastrar">
+    Cadastrar Consulta
+</a>
+
+<br><br>
+
+<table>
+
+<tr>
+    <th>Paciente</th>
+    <th>Médico</th>
+    <th>Data</th>
+    <th>Horário</th>
+    <th>Observação</th>
+    <th>Ações</th>
+</tr>
+
+{{#each consultas}}
+
+<tr>
+
+    <td>{{Paciente.nome}}</td>
+    <td>{{Medico.nome}}</td>
+    <td>{{data}}</td>
+    <td>{{horario}}</td>
+    <td>{{observacao}}</td>
+
+    <td>
+
+        <a href="/consultas/editar/{{id}}">
+            Editar
+        </a>
+
+        |
+
+        <a href="/consultas/excluir/{{id}}">
+            Excluir
+        </a>
+
+    </td>
+
+</tr>
+
+{{/each}}
+
+</table>
