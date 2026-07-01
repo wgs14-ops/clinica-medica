@@ -1,0 +1,51 @@
+<h2>Médicos</h2>
+
+<a href="/medicos/cadastrar">
+Cadastrar Médico
+</a>
+
+<br><br>
+
+<table>
+
+<tr>
+
+<th>Nome</th>
+<th>Especialidade</th>
+<th>CRM</th>
+<th>Telefone</th>
+<th>Ações</th>
+
+</tr>
+
+{{#each medicos}}
+
+<tr>
+
+<td>{{nome}}</td>
+
+<td>{{especialidade}}</td>
+
+<td>{{crm}}</td>
+
+<td>{{telefone}}</td>
+
+<td>
+
+<a href="/medicos/editar/{{id}}">
+Editar
+</a>
+
+|
+
+<a href="/medicos/excluir/{{id}}">
+Excluir
+</a>
+
+</td>
+
+</tr>
+
+{{/each}}
+
+</table>
