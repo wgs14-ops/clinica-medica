@@ -1,0 +1,64 @@
+<h2>Cadastrar Consulta</h2>
+
+<form action="/consultas/cadastrar" method="POST">
+
+<label>Paciente</label>
+
+<select name="PacienteId">
+
+{{#each pacientes}}
+
+<option value="{{id}}">
+
+{{nome}}
+
+</option>
+
+{{/each}}
+
+</select>
+
+<label>Médico</label>
+
+<select name="MedicoId">
+
+{{#each medicos}}
+
+<option value="{{id}}">
+
+{{nome}}
+
+</option>
+
+{{/each}}
+
+</select>
+
+<label>Data</label>
+
+<input
+type="date"
+name="data"
+required>
+
+<label>Horário</label>
+
+<input
+type="time"
+name="horario"
+required>
+
+<label>Observação</label>
+
+<textarea
+name="observacao"></textarea>
+
+<br><br>
+
+<button>
+
+Salvar
+
+</button>
+
+</form>
